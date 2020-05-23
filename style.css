@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f9f5;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+#root {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px 50px;
+  justify-content: space-between;
+}
+
+#game-panel__header {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+#game-panel__header input {
+  margin-right: 10px;
+}
+
+#game-panel__header span {
+  margin-right: 40px;
+}
+
+.generate-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #13d5ac;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#game-panel {
+  width: calc(100vw - 255px);
+  height: calc(100vh - 70px);
+}
+
+#game-panel__desk {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 10px 0 auto;
+  border: 1px solid #a5a5a5;
+  background-color: white;
+}
+
+.block {
+  position: absolute;
+  border: 1px solid black;
+}
+
+.active {
+  outline: 1px ridge red;
+  box-shadow: 0px 0px 5px red;
+  z-index: 3;
+}
+
+aside {
+  display: flex;
+  width: fit-content;
+  height: 100vh;
+  padding-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+#burger {
+  border: none;
+  margin-bottom: 20px;
+  align-self: flex-end;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#features {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 50px);
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+#features__palette {
+  display: flex;
+  width: 120px;
+  height: 100%;
+  padding: 0 10px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.features__header {
+  margin: 15px 0 20px 0;
+  text-align: center;
+}
+
+#palette {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid darkgray;
+}
+
+.palette-block {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+  box-shadow: 5px 5px 3px grey;
+}
+
+@keyframes info {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+#features__settings.visible {
+  display: block;
+  animation: info 0.5s linear;
+}
+
+#features__settings {
+  display: none;
+  width: 170px;
+}
+
+#settings__inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+#settings__inputs input {
+  width: 100%;
+  margin: 5px 0 15px 0;
+}
