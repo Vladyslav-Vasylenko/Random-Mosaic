@@ -3,7 +3,7 @@
 
 **Description:**
 Are you fan of random? Check Random Mosaic! It's simple, creative and beautiful. Don't overthink just grab it and use:)
-### [LIVE](https://vladyslav-vasylenko.github.io/Random-Mosaic/)
+### [LIVE](https://vladyslav.github.io/Random-Mosaic/)
 **Technologies used:**
  - HTML
  - CSS
